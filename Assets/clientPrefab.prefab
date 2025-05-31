@@ -52,7 +52,7 @@ MonoBehaviour:
   exitPoint: {fileID: 0}
   drinkDuration: 3
   price: 5
-  maxWaitTime: 3.5
+  maxWaitTime: 15
   impatienceIndicator: {fileID: 0}
 --- !u!212 &-1279787892534253565
 SpriteRenderer:
