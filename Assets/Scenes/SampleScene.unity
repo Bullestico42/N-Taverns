@@ -1301,7 +1301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f83f161f9a419040a2c8a378adad846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
+  speed: 7
 --- !u!4 &945453176
 Transform:
   m_ObjectHideFlags: 0
@@ -1393,7 +1393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2706e0a35b48650428571ba58c117b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxBeers: 99
+  maxBeers: 5
   currentBeers: 0
   beerCountText: {fileID: 1563588134}
 --- !u!1 &1010155720
@@ -1458,7 +1458,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.091220856, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.091220856, g: 1, b: 0, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2120,8 +2120,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 729851c49f1dab84ebbf98633a408020, type: 3}
-  m_Resource: {fileID: 8300000, guid: 729851c49f1dab84ebbf98633a408020, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1f2571fafdaa64a4eaba4ab84d01a244, type: 3}
+  m_Resource: {fileID: 8300000, guid: 1f2571fafdaa64a4eaba4ab84d01a244, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.048
   m_Pitch: 1
@@ -2562,7 +2562,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.8893321, b: 0.27735847, a: 1}
+  m_Color: {r: 1, g: 0.8893321, b: 0.27735847, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2697,7 +2697,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5622641, g: 0.20262726, b: 0.38063768, a: 1}
+  m_Color: {r: 0.5622641, g: 0.20262726, b: 0.38063768, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2740,7 +2740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxBeers: 5
-  refillInterval: 0.1
+  refillInterval: 3
   beerPrefab: {fileID: 2182666238538249271, guid: 92573ec07324fae4089a74b10ad5c271, type: 3}
   slotTransforms:
   - {fileID: 36677945}
@@ -3063,7 +3063,7 @@ MonoBehaviour:
   - {fileID: 1642429285}
   - {fileID: 1638170761}
   exitPoint: {fileID: 1239165748}
-  spawnInterval: 0.2
+  spawnInterval: 4
 --- !u!4 &1572437035
 Transform:
   m_ObjectHideFlags: 0
@@ -3312,7 +3312,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -3024907452605534592, guid: c10ff4c05efefa643ba5c49090e89622, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3332,8 +3332,8 @@ Transform:
   m_GameObject: {fileID: 1908475350}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: -2.5, z: 5}
-  m_LocalScale: {x: 9, y: 1, z: 1}
+  m_LocalPosition: {x: -4.25, y: -2.8, z: 5}
+  m_LocalScale: {x: 0.85, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3372,17 +3372,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.011138439, y: 0.33660722}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 10, y: 1.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10.021573, y: 1.2524557}
   m_EdgeRadius: 0
 --- !u!1 &1941254280
 GameObject:
@@ -3733,7 +3733,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
