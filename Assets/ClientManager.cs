@@ -17,7 +17,7 @@ public class ClientManager : MonoBehaviour
 
     private IEnumerator SpawnRoutine()
     {
-        while(true)
+        while (true)
         {
             yield return new WaitForSeconds(spawnInterval);
             TrySpawnClient();
@@ -26,16 +26,12 @@ public class ClientManager : MonoBehaviour
 
     private void TrySpawnClient()
     {
-        // récupère les slots libres
         var freeSlots = beerSlots.Where(s => !s.IsOccupied).ToArray();
         if (freeSlots.Length == 0) return;
 
-        // choix aléatoire
         var slot = freeSlots[Random.Range(0, freeSlots.Length)];
-        // choix d’un point de spawn au hasard
         var spawn = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
-        // instanciation
         var go = Instantiate(clientPrefab, spawn.position, Quaternion.identity);
         var client = go.GetComponent<Client>();
         client.targetSlot = slot;

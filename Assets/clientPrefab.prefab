@@ -47,11 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2049f05c59d2734aaf8e35ae4e211ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 2
+  walkSpeed: 7
   targetSlot: {fileID: 0}
   exitPoint: {fileID: 0}
   drinkDuration: 3
   price: 5
+  maxWaitTime: 15
+  impatienceIndicator: {fileID: 0}
 --- !u!212 &-1279787892534253565
 SpriteRenderer:
   m_ObjectHideFlags: 0

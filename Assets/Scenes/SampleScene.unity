@@ -334,6 +334,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1707742088704857954, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
+      propertyPath: beerScale
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2794016423153730242, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
       propertyPath: m_Name
       value: Beer 2
@@ -481,6 +485,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1707742088704857954, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
+      propertyPath: beerScale
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2794016423153730242, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
       propertyPath: m_Name
       value: Beer 2 (3)
@@ -538,6 +546,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1707742088704857954, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
+      propertyPath: beerScale
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2794016423153730242, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
       propertyPath: m_Name
       value: Beer 1
@@ -1204,6 +1216,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1707742088704857954, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
+      propertyPath: beerScale
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2794016423153730242, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
       propertyPath: m_Name
       value: Beer 2 (9)
@@ -1432,7 +1448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2706e0a35b48650428571ba58c117b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxBeers: 5
+  maxBeers: 99
   currentBeers: 0
   beerCountText: {fileID: 1563588134}
 --- !u!1 &1010155720
@@ -1800,6 +1816,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1707742088704857954, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
+      propertyPath: beerScale
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2794016423153730242, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
       propertyPath: m_Name
       value: Beer 2 (7)
@@ -2646,7 +2666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxBeers: 5
-  refillInterval: 4
+  refillInterval: 0.2
   beerPrefab: {fileID: 2182666238538249271, guid: 92573ec07324fae4089a74b10ad5c271, type: 3}
   slotTransforms:
   - {fileID: 36677945}
@@ -2662,6 +2682,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1707742088704857954, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
+      propertyPath: beerScale
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2794016423153730242, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
       propertyPath: m_Name
       value: Beer 2 (2)
@@ -2730,6 +2754,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1707742088704857954, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
+      propertyPath: beerScale
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2794016423153730242, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
       propertyPath: m_Name
       value: Beer 3
@@ -2961,7 +2989,7 @@ MonoBehaviour:
   - {fileID: 1642429285}
   - {fileID: 1638170761}
   exitPoint: {fileID: 1239165748}
-  spawnInterval: 5
+  spawnInterval: 0.3
 --- !u!4 &1572437035
 Transform:
   m_ObjectHideFlags: 0
@@ -3064,6 +3092,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1707742088704857954, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
+      propertyPath: beerScale
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2794016423153730242, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
       propertyPath: m_Name
       value: Beer 2 (4)
@@ -3317,6 +3349,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1707742088704857954, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
+      propertyPath: beerScale
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2794016423153730242, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
       propertyPath: m_Name
       value: Beer 2 (5)
@@ -3374,6 +3410,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1707742088704857954, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
+      propertyPath: beerScale
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2794016423153730242, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
       propertyPath: m_Name
       value: Beer 2 (6)
@@ -3444,12 +3484,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2052966614}
   - component: {fileID: 2052966613}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!212 &2052966613
 SpriteRenderer:
@@ -3540,6 +3580,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1707742088704857954, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
+      propertyPath: beerScale
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2794016423153730242, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
       propertyPath: m_Name
       value: Beer 2 (8)
@@ -3599,7 +3643,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1707742088704857954, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
       propertyPath: beerScale
-      value: 1
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 2794016423153730242, guid: 175d44caf8ed6974495c4cbf8a8af376, type: 3}
       propertyPath: m_Name
