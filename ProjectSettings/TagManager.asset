@@ -41,5 +41,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Player
+    uniqueID: 3105788315
+    locked: 0
+  - name: Beer
+    uniqueID: 4015113917
+    locked: 0
   m_RenderingLayers:
   - Default

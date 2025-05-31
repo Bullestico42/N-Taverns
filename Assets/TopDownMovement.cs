@@ -1,12 +1,15 @@
 using UnityEngine;
-using UnityEngine.InputSystem;  // ou Input.GetAxis si vous Ítes en ancien Input System
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class TopDownMovement : MonoBehaviour
 {
     public float speed = 5f;
-    Rigidbody2D rb;
-    Vector2 moveInput;
+    private Rigidbody2D rb;
+    private Vector2 moveInput;
+
+    private Transform visual;
+    private SpriteRenderer sr;
 
     void Awake()
     {
@@ -14,11 +17,15 @@ public class TopDownMovement : MonoBehaviour
         rb.gravityScale = 0f;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+
+        // R√©cup√®re le GameObject enfant "Visual" et son SpriteRenderer
+        visual = transform.Find("Visual");
+        if (visual != null)
+            sr = visual.GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        // Lecture simple du clavier (nouveau Input System)
         var kb = Keyboard.current;
         moveInput = Vector2.zero;
         if (kb.wKey.isPressed) moveInput.y += 1;
@@ -30,11 +37,13 @@ public class TopDownMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Version MovePosition pour collisions plus fiables
         Vector2 targetPos = rb.position + moveInput * speed * Time.fixedDeltaTime;
         rb.MovePosition(targetPos);
 
-        // --- OU, si vous prÈfÈrez la vÈlocitÈ : ---
-        // rb.velocity = moveInput * speed;
+        // Flip horizontal selon la direction
+        if (moveInput.x > 0)
+            sr.flipX = false;
+        else if (moveInput.x < 0)
+            sr.flipX = true;
     }
 }
