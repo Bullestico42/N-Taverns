@@ -12,10 +12,12 @@ public class ClientManager : MonoBehaviour
     public BeerSlot[] beerSlots;
     public Transform exitPoint;
     public float spawnInterval = 5f;
+    public BeerDispenser beerDispenser;
+
 
     private bool isPaused = false;
-    private float walkSpeed = 2f;
-    private float waitTime = 10f;
+    private float walkSpeed = 5f;
+    private float waitTime = 15f;
 
     void Start()
     {

@@ -15,12 +15,14 @@ public class ShopManager : MonoBehaviour
 
     void Update()
     {
-
+        if (!isShopOpen)
+            clientManager.SetPaused(false);
     }
     public void ToggleShop()
     {
         isShopOpen = !isShopOpen;
         shopUI.SetActive(isShopOpen);
+        clientManager.SetPaused(true);
         playerMovement.enabled = !isShopOpen;
 
         if (isShopOpen)
@@ -36,7 +38,7 @@ public class ShopManager : MonoBehaviour
 
     public void UpgradeSpeed()
     {
-        if (GameManager.Instance.goldInRegister > 50)
+        if (GameManager.Instance.goldInRegister >= 50)
         {
             GameManager.Instance.PayAmountWithRegister(50);
             playerMovement.speed += 1f;
@@ -49,7 +51,7 @@ public class ShopManager : MonoBehaviour
 
     public void UpgradeGoldCap()
     {
-        if (GameManager.Instance.goldInRegister > 50)
+        if (GameManager.Instance.goldInRegister >= 50)
         {
             GameManager.Instance.PayAmountWithRegister(50);
             GameManager.Instance.maxGoldOnPlayer += 20;
@@ -63,7 +65,7 @@ public class ShopManager : MonoBehaviour
 
     public void UpgradeBeerCapacity()
     {
-        if (GameManager.Instance.goldInRegister > 100)
+        if (GameManager.Instance.goldInRegister >= 100)
         {
             GameManager.Instance.PayAmountWithRegister(100);
             playerInventory.maxBeers += 1;
@@ -79,7 +81,7 @@ public class ShopManager : MonoBehaviour
 
     public void UpgradeClientSpawnRate()
     {
-        if (GameManager.Instance.goldInRegister > 100)
+        if (GameManager.Instance.goldInRegister >= 100)
         {
             if (clientManager.spawnInterval > 1f)
             {
@@ -100,7 +102,7 @@ public class ShopManager : MonoBehaviour
     
     public void UpgradeDispenserRefillSpeed()
     {
-        if (GameManager.Instance.goldInRegister > 80)
+        if (GameManager.Instance.goldInRegister >= 80)
         {
             if (beerDispenser.refillInterval > 0.5f)
             {
@@ -121,7 +123,7 @@ public class ShopManager : MonoBehaviour
 
     public void UpgradeDispenserCapacity()
     {
-        if (GameManager.Instance.goldInRegister > 80)
+        if (GameManager.Instance.goldInRegister >= 80)
         {
             if (beerDispenser.maxBeers < 10)
             {
@@ -142,7 +144,7 @@ public class ShopManager : MonoBehaviour
 
     public void UpgradeClientImpatience()
     {
-        if (GameManager.Instance.goldInRegister > 100)
+        if (GameManager.Instance.goldInRegister >= 100)
         {    
             if (clientManager.clientPrefabSettings.maxWaitTime > 3f)
             {
@@ -165,6 +167,7 @@ public class ShopManager : MonoBehaviour
     {
         isShopOpen = false;
         shopUI.SetActive(false);
+        clientManager.SetPaused(false);
         playerMovement.enabled = true;
         EventSystem.current.SetSelectedGameObject(null);
     }

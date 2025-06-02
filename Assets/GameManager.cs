@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public int playerLevel = 1;
     public TextMeshProUGUI playerLevelText;
     public TextMeshProUGUI playerExpText;
+    public BeerDispenser beerDispenser;
 
     [Header("Or sur le joueur")]
     public int goldOnPlayer = 0;
@@ -98,6 +99,8 @@ public class GameManager : MonoBehaviour
             cm.SetDifficulty(currentWalkSpeed, currentWaitTime);
             cm.spawnInterval *= 0.7f;
         }
+        if (beerDispenser.refillInterval > 0.5)
+            beerDispenser.refillInterval-= 3f;
     }
 
     public void UpdateGoldUI()

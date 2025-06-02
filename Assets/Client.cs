@@ -4,14 +4,14 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class Client : MonoBehaviour
 {
-    public float walkSpeed = 2f;
+    public float walkSpeed = 5f;
     public BeerSlot targetSlot;
     public Transform exitPoint;
     public float drinkDuration = 3f;
     public int price = 5;
 
     [Header("Impatience")]
-    public float maxWaitTime = 10f;
+    public float maxWaitTime = 15f;
     public GameObject impatienceIndicator;
 
     private enum State { Walking, WaitingBeer, Drinking, Leaving }
@@ -63,7 +63,7 @@ public class Client : MonoBehaviour
         if (state == State.WaitingBeer)
         {
             targetSlot.FreeSlot();
-            GameManager.Instance.AddGoldToPlayer(-10);
+            GameManager.Instance.AddGoldToPlayer(-8);
             state = State.Leaving;
         }
     }
