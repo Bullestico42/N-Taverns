@@ -14,6 +14,8 @@ public class ClientManager : MonoBehaviour
     public float spawnInterval = 5f;
 
     private bool isPaused = false;
+    private float walkSpeed = 2f;
+    private float waitTime = 10f;
 
     void Start()
     {
@@ -36,6 +38,12 @@ public class ClientManager : MonoBehaviour
         isPaused = value;
     }
 
+    public void SetDifficulty(float newSpeed, float newWaitTime)
+    {
+        walkSpeed = newSpeed;
+        waitTime = newWaitTime;
+    }
+
     private void TrySpawnClient()
     {
         var freeSlots = beerSlots.Where(s => !s.IsOccupied).ToArray();
@@ -46,6 +54,9 @@ public class ClientManager : MonoBehaviour
 
         var go = Instantiate(clientPrefab, spawn.position, Quaternion.identity);
         var client = go.GetComponent<Client>();
+
+        client.walkSpeed = walkSpeed;
+        client.maxWaitTime = waitTime;
         client.targetSlot = slot;
         client.exitPoint = exitPoint;
     }

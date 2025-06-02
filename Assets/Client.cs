@@ -104,6 +104,7 @@ public class Client : MonoBehaviour
 
         if (GameManager.Instance.AddGoldToPlayer(price))
         {
+            GameManager.Instance.GainExp(5);
             Debug.Log($"Client a payé {price} or.");
         }
         else
