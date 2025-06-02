@@ -15,12 +15,8 @@ public class ShopManager : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.tabKey.wasPressedThisFrame)
-        {
-            ToggleShop();
-        }
-    }
 
+    }
     public void ToggleShop()
     {
         isShopOpen = !isShopOpen;
