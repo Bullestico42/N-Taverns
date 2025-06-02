@@ -54,6 +54,12 @@ public class GameManager : MonoBehaviour
         UpdateGoldUI();
     }
 
+    public void PayAmountWithRegister(int amount)
+    {
+        goldInRegister -= amount;
+        UpdateGoldUI();
+    }
+
     public void UpdateGoldUI()
     {
         if (goldText != null)

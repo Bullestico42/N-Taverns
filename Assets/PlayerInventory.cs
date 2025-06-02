@@ -13,14 +13,14 @@ public class PlayerInventory : MonoBehaviour
 
     void Start()
     {
-        UpdateUI();
+        UpdateBeerUI();
     }
 
     public bool AddBeer()
     {
         if (currentBeers >= maxBeers) return false;
         currentBeers++;
-        UpdateUI();
+        UpdateBeerUI();
         return true;
     }
 
@@ -28,11 +28,11 @@ public class PlayerInventory : MonoBehaviour
     {
         if (currentBeers <= 0) return false;
         currentBeers--;
-        UpdateUI();
+        UpdateBeerUI();
         return true;
     }
 
-    void UpdateUI()
+    public void UpdateBeerUI()
     {
         if (beerCountText != null)
             beerCountText.text = $"Beer : {currentBeers}/{maxBeers}";

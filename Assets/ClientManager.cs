@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class ClientManager : MonoBehaviour
 {
+    [Header("Réglages des clients")]
+    public Client clientPrefabSettings;
+
     public GameObject clientPrefab;
     public Transform[] spawnPoints;
     public BeerSlot[] beerSlots;
     public Transform exitPoint;
     public float spawnInterval = 5f;
+
+    private bool isPaused = false;
 
     void Start()
     {
@@ -20,8 +25,15 @@ public class ClientManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(spawnInterval);
-            TrySpawnClient();
+
+            if (!isPaused)
+                TrySpawnClient();
         }
+    }
+
+    public void SetPaused(bool value)
+    {
+        isPaused = value;
     }
 
     private void TrySpawnClient()
