@@ -11,6 +11,9 @@ public class TopDownMovement : MonoBehaviour
     private Transform visual;
     private SpriteRenderer sr;
 
+    private Animator animator;
+    private PlayerInventory inventory;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -21,7 +24,11 @@ public class TopDownMovement : MonoBehaviour
         // Récupère le GameObject enfant "Visual" et son SpriteRenderer
         visual = transform.Find("Visual");
         if (visual != null)
+        {
             sr = visual.GetComponent<SpriteRenderer>();
+            animator = visual.GetComponent<Animator>();
+        }
+        inventory = GetComponent<PlayerInventory>();
     }
 
     void Update()
@@ -33,6 +40,14 @@ public class TopDownMovement : MonoBehaviour
         if (kb.aKey.isPressed) moveInput.x -= 1;
         if (kb.dKey.isPressed) moveInput.x += 1;
         moveInput = moveInput.normalized;
+        UpdateAnimator();
+    }
+
+    void UpdateAnimator()
+    {
+        if (animator == null || inventory == null) return;
+
+        animator.SetBool("HasBeer", inventory.currentBeers > 0);
     }
 
     void FixedUpdate()
@@ -40,7 +55,7 @@ public class TopDownMovement : MonoBehaviour
         Vector2 targetPos = rb.position + moveInput * speed * Time.fixedDeltaTime;
         rb.MovePosition(targetPos);
 
-        // Flip horizontal selon la direction
+        // Flip sprite on axis movement
         if (moveInput.x > 0)
             sr.flipX = false;
         else if (moveInput.x < 0)

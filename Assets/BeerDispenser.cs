@@ -8,7 +8,7 @@ public class BeerDispenser : MonoBehaviour
 {
     [Header("Paramètres du distributeur")]
     [Tooltip("Nombre max de bières que le distributeur peut contenir")]
-    public int maxBeers = 5;
+    public int maxBeers = 10;
     [Tooltip("Intervalle (en sec) entre chaque recharge d'une bière")]
     public float refillInterval = 10f;
 
@@ -78,17 +78,29 @@ public class BeerDispenser : MonoBehaviour
         if (!Keyboard.current.eKey.wasPressedThisFrame)
             return;
 
-        if (currentBeers > 0)
+        if (GameManager.Instance.goldOnPlayer >= GameManager.Instance.maxGoldOnPlayer)
+        {
+            Debug.Log("Or max atteint, ne peut pas prendre de bière.");
+            return;
+        }
+
+        if (currentBeers > 0 && GameManager.Instance.goldOnPlayer > 2)
         {
             if (playerInvInRange.AddBeer())
             {
                 TakeBeerFromDispenser();
+                GameManager.Instance.goldOnPlayer -= 2;
+                GameManager.Instance.UpdateGoldUI();
                 Debug.Log("Bière récoltée !");
             }
             else
             {
                 Debug.Log("Inventaire plein.");
             }
+        }
+        else if (GameManager.Instance.goldOnPlayer <= 2)
+        {
+            Debug.Log("Tu es pauvre");
         }
         else
         {

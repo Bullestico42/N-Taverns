@@ -16,7 +16,7 @@ public class Client : MonoBehaviour
 
     private enum State { Walking, WaitingBeer, Drinking, Leaving }
     private State state;
-
+    private SpriteRenderer sr;
     private Coroutine impatienceRoutine;
 
     void Start()
@@ -24,7 +24,6 @@ public class Client : MonoBehaviour
         state = State.Walking;
         if (impatienceIndicator != null)
             impatienceIndicator.SetActive(false);
-
         targetSlot.AssignClient();
         targetSlot.OnBeerPlaced += OnBeerArrived;
     }
@@ -33,12 +32,8 @@ public class Client : MonoBehaviour
     {
         switch (state)
         {
-            case State.Walking:
-                WalkToSeat();
-                break;
-            case State.Leaving:
-                WalkToExit();
-                break;
+            case State.Walking: WalkToSeat(); break;
+            case State.Leaving: WalkToExit(); break;
         }
     }
 
@@ -49,29 +44,26 @@ public class Client : MonoBehaviour
 
         if (Vector3.Distance(transform.position, goal) < 0.05f)
         {
-            // Arrivé, on attend la bière
             targetSlot.EnableServe();
             state = State.WaitingBeer;
-            Debug.Log("Client arrivé, attend la bière");
-
-            // Lance timer d’impatience
             impatienceRoutine = StartCoroutine(ImpatienceTimer());
         }
     }
 
     private IEnumerator ImpatienceTimer()
     {
+        float threshold = maxWaitTime * 0.7f;
+        yield return new WaitForSeconds(threshold);
+
         if (impatienceIndicator != null)
             impatienceIndicator.SetActive(true);
 
-        yield return new WaitForSeconds(maxWaitTime);
+        yield return new WaitForSeconds(maxWaitTime - threshold);
 
         if (state == State.WaitingBeer)
         {
-            Debug.Log("Client s'impatiente et part !");
-            // libère la place
             targetSlot.FreeSlot();
-            // passe en Leaving
+            GameManager.Instance.AddGoldToPlayer(-10);
             state = State.Leaving;
         }
     }
@@ -81,10 +73,11 @@ public class Client : MonoBehaviour
         if (impatienceIndicator != null)
             impatienceIndicator.SetActive(false);
 
-        Vector3 goal = exitPoint.position;
-        transform.position = Vector3.MoveTowards(transform.position, goal, walkSpeed * Time.deltaTime);
+        sr = GetComponent<SpriteRenderer>();
+        sr.flipX = false;
+        transform.position = Vector3.MoveTowards(transform.position, exitPoint.position, walkSpeed * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position, goal) < 0.05f)
+        if (Vector3.Distance(transform.position, exitPoint.position) < 0.05f)
         {
             Destroy(gameObject);
         }
@@ -94,24 +87,29 @@ public class Client : MonoBehaviour
     {
         if (state != State.WaitingBeer) return;
 
-        // Stoppe l’impatience
         if (impatienceRoutine != null)
             StopCoroutine(impatienceRoutine);
+
         if (impatienceIndicator != null)
             impatienceIndicator.SetActive(false);
-
         state = State.Drinking;
-        Debug.Log("Client commence à boire");
         StartCoroutine(DrinkAndPay());
     }
 
     private IEnumerator DrinkAndPay()
     {
         yield return new WaitForSeconds(drinkDuration);
-
-        GameManager.Instance?.AddGold(price);
         targetSlot.ConsumeBeer();
         targetSlot.FreeSlot();
+
+        if (GameManager.Instance.AddGoldToPlayer(price))
+        {
+            Debug.Log($"Client a payé {price} or.");
+        }
+        else
+        {
+            Debug.Log("Joueur ne peut pas encaisser plus d’or.");
+        }
 
         state = State.Leaving;
     }

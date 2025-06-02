@@ -1,0 +1,1378 @@
+fileFormatVersion: 2
+guid: f06cc594975997246b8cd1ca18c5df38
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2115634302068613968
+    second: lomorale_0
+  - first:
+      213: -5569988805277934259
+    second: lomorale_1
+  - first:
+      213: 4614643788964735798
+    second: lomorale_2
+  - first:
+      213: -1694304981052995671
+    second: lomorale_3
+  - first:
+      213: 7443759311827412308
+    second: lomorale_4
+  - first:
+      213: -759794098596027577
+    second: lomorale_5
+  - first:
+      213: 4456496571922593056
+    second: lomorale_6
+  - first:
+      213: 5227138224731124574
+    second: lomorale_7
+  - first:
+      213: -1299120900165774930
+    second: lomorale_8
+  - first:
+      213: -7071462244752557984
+    second: lomorale_9
+  - first:
+      213: -6945838868661539597
+    second: lomorale_10
+  - first:
+      213: -6443725814447338303
+    second: lomorale_11
+  - first:
+      213: -8885604059288246184
+    second: lomorale_12
+  - first:
+      213: 5542649022475197515
+    second: lomorale_13
+  - first:
+      213: 1924527775702619535
+    second: lomorale_14
+  - first:
+      213: -3661908502742617659
+    second: lomorale_15
+  - first:
+      213: 5327089008128378866
+    second: lomorale_16
+  - first:
+      213: 6972711619883117086
+    second: lomorale_17
+  - first:
+      213: 1000010466844414625
+    second: lomorale_18
+  - first:
+      213: 5579861100178799265
+    second: lomorale_19
+  - first:
+      213: 8365341244954965803
+    second: lomorale_20
+  - first:
+      213: -6115434129602379845
+    second: lomorale_21
+  - first:
+      213: -4179246793952304749
+    second: lomorale_22
+  - first:
+      213: 5402818302539820486
+    second: lomorale_23
+  - first:
+      213: -1386317402176506707
+    second: lomorale_24
+  - first:
+      213: 1518754616651392388
+    second: lomorale_25
+  - first:
+      213: -5103743355307297896
+    second: lomorale_26
+  - first:
+      213: 8027651756117265716
+    second: lomorale_27
+  - first:
+      213: 36613164635128307
+    second: lomorale_28
+  - first:
+      213: 2791281486323560453
+    second: lomorale_29
+  - first:
+      213: 7090434564977136337
+    second: lomorale_30
+  - first:
+      213: 6104446951562410993
+    second: lomorale_31
+  - first:
+      213: 2754476083486158203
+    second: lomorale_32
+  - first:
+      213: -6419308439987633303
+    second: lomorale_33
+  - first:
+      213: -3490435565504731765
+    second: lomorale_34
+  - first:
+      213: 8722404880554781957
+    second: lomorale_35
+  - first:
+      213: -6867275057828430325
+    second: lomorale_36
+  - first:
+      213: -8683661557665839404
+    second: lomorale_37
+  - first:
+      213: 8987193450478763489
+    second: lomorale_38
+  - first:
+      213: 4833566013698002950
+    second: lomorale_39
+  - first:
+      213: -3117051028358567161
+    second: lomorale_40
+  - first:
+      213: -3832287837439708585
+    second: lomorale_41
+  - first:
+      213: -5769775824325954390
+    second: lomorale_42
+  - first:
+      213: 1591197210702535410
+    second: lomorale_43
+  - first:
+      213: 1891611532619395828
+    second: lomorale_44
+  - first:
+      213: 5590545959667009112
+    second: lomorale_45
+  - first:
+      213: 3949350870477819027
+    second: lomorale_46
+  - first:
+      213: 3590919751079777829
+    second: lomorale_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lomorale_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 311
+        width: 63
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0536e69403e3c5d10800000000000000
+      internalID: 2115634302068613968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 312
+        width: 64
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4d918251bc63b2b0800000000000000
+      internalID: -5569988805277934259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_2
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 311
+        width: 63
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ba43e93128a0040800000000000000
+      internalID: 4614643788964735798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_3
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 311
+        width: 63
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a74927b89e9c78e0800000000000000
+      internalID: -1694304981052995671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 415
+        width: 84
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 455aaf6c7ab8d4760800000000000000
+      internalID: 7443759311827412308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_5
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 366
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 743eebafa4ba475f0800000000000000
+      internalID: -759794098596027577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_6
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 415
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02531384508a8dd30800000000000000
+      internalID: 4456496571922593056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_7
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 415
+        width: 79
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e53f6f455868a8840800000000000000
+      internalID: 5227138224731124574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_8
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 369
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea15551ac6898fde0800000000000000
+      internalID: -1299120900165774930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 370
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 068ffeafd8e1ddd90800000000000000
+      internalID: -7071462244752557984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_10
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 285
+        width: 91
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fce35e795c6b9f90800000000000000
+      internalID: -6945838868661539597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_11
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 326
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cc0ad713894396a0800000000000000
+      internalID: -6443725814447338303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_12
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 326
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 858ea5f9f2effa480800000000000000
+      internalID: -8885604059288246184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_13
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 284
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4cdc437be17bec40800000000000000
+      internalID: 5542649022475197515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_14
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 326
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85902fb0db45ba10800000000000000
+      internalID: 1924527775702619535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_15
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 285
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c13b0e4e994e2dc0800000000000000
+      internalID: -3661908502742617659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_16
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 237
+        width: 82
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f741609a3f9de940800000000000000
+      internalID: 5327089008128378866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_17
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 271
+        width: 127
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1a2f58764c04c060800000000000000
+      internalID: 6972711619883117086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_18
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 288
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a21fe7a830c0ed00800000000000000
+      internalID: 1000010466844414625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_19
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 286
+        width: 47
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aa7d247b16af6d40800000000000000
+      internalID: 5579861100178799265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_20
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 238
+        width: 125
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27f6727a89a71470800000000000000
+      internalID: 8365341244954965803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_21
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 262
+        width: 74
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbfffb16f0d912ba0800000000000000
+      internalID: -6115434129602379845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_22
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 263
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39168c9fe255006c0800000000000000
+      internalID: -4179246793952304749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_23
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 264
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd6ddcee9aaafa40800000000000000
+      internalID: 5402818302539820486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_24
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 269
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da4b351faafc2cce0800000000000000
+      internalID: -1386317402176506707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_25
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 266
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 485ad72f643b31510800000000000000
+      internalID: 1518754616651392388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_26
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 266
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 893f52a857cdb29b0800000000000000
+      internalID: -5103743355307297896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_27
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 264
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43d09e76db2f76f60800000000000000
+      internalID: 8027651756117265716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_28
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 264
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f10e20ba73128000800000000000000
+      internalID: 36613164635128307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_29
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 264
+        width: 31
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500b07419bf9cb620800000000000000
+      internalID: 2791281486323560453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_30
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 265
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d21d9c8ba8466260800000000000000
+      internalID: 7090434564977136337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_31
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 243
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fbf712e82a57b450800000000000000
+      internalID: 6104446951562410993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_32
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 244
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7d6082776dd93620800000000000000
+      internalID: 2754476083486158203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_33
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 243
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 963ceda1cf80ae6a0800000000000000
+      internalID: -6419308439987633303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_34
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 244
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8563b6a85b7f8fc0800000000000000
+      internalID: -3490435565504731765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_35
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 229
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50de99c86053c0970800000000000000
+      internalID: 8722404880554781957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_36
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 241
+        width: 121
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0e7c3328b982b0a0800000000000000
+      internalID: -6867275057828430325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_37
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 213
+        width: 234
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d6cc9142df6d7780800000000000000
+      internalID: -8683661557665839404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_38
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 218
+        width: 200
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1edf087b3dce8bc70800000000000000
+      internalID: 8987193450478763489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_39
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 198
+        width: 163
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 600dedc1ea6441340800000000000000
+      internalID: 4833566013698002950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_40
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 196
+        width: 162
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70bebe3ca920eb4d0800000000000000
+      internalID: -3117051028358567161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_41
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 162
+        width: 101
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7523b54248af0dac0800000000000000
+      internalID: -3832287837439708585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_42
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 37
+        width: 237
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa43a651573adefa0800000000000000
+      internalID: -5769775824325954390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_43
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 35
+        width: 116
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fa548fbe61151610800000000000000
+      internalID: 1591197210702535410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_44
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 37
+        width: 93
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f2bfceaaaa504a10800000000000000
+      internalID: 1891611532619395828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_45
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1
+        width: 144
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 856827a2eeb959d40800000000000000
+      internalID: 5590545959667009112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_46
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 1
+        width: 146
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39cc53031b9eec630800000000000000
+      internalID: 3949350870477819027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lomorale_47
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 3
+        width: 163
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5265b04fc7285d130800000000000000
+      internalID: 3590919751079777829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      lomorale_0: 2115634302068613968
+      lomorale_1: -5569988805277934259
+      lomorale_10: -6945838868661539597
+      lomorale_11: -6443725814447338303
+      lomorale_12: -8885604059288246184
+      lomorale_13: 5542649022475197515
+      lomorale_14: 1924527775702619535
+      lomorale_15: -3661908502742617659
+      lomorale_16: 5327089008128378866
+      lomorale_17: 6972711619883117086
+      lomorale_18: 1000010466844414625
+      lomorale_19: 5579861100178799265
+      lomorale_2: 4614643788964735798
+      lomorale_20: 8365341244954965803
+      lomorale_21: -6115434129602379845
+      lomorale_22: -4179246793952304749
+      lomorale_23: 5402818302539820486
+      lomorale_24: -1386317402176506707
+      lomorale_25: 1518754616651392388
+      lomorale_26: -5103743355307297896
+      lomorale_27: 8027651756117265716
+      lomorale_28: 36613164635128307
+      lomorale_29: 2791281486323560453
+      lomorale_3: -1694304981052995671
+      lomorale_30: 7090434564977136337
+      lomorale_31: 6104446951562410993
+      lomorale_32: 2754476083486158203
+      lomorale_33: -6419308439987633303
+      lomorale_34: -3490435565504731765
+      lomorale_35: 8722404880554781957
+      lomorale_36: -6867275057828430325
+      lomorale_37: -8683661557665839404
+      lomorale_38: 8987193450478763489
+      lomorale_39: 4833566013698002950
+      lomorale_4: 7443759311827412308
+      lomorale_40: -3117051028358567161
+      lomorale_41: -3832287837439708585
+      lomorale_42: -5769775824325954390
+      lomorale_43: 1591197210702535410
+      lomorale_44: 1891611532619395828
+      lomorale_45: 5590545959667009112
+      lomorale_46: 3949350870477819027
+      lomorale_47: 3590919751079777829
+      lomorale_5: -759794098596027577
+      lomorale_6: 4456496571922593056
+      lomorale_7: 5227138224731124574
+      lomorale_8: -1299120900165774930
+      lomorale_9: -7071462244752557984
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

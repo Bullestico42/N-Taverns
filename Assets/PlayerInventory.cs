@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro;             // 1) On importe TMPro
+using TMPro;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerInventory : MonoBehaviour
@@ -9,7 +9,7 @@ public class PlayerInventory : MonoBehaviour
     public int currentBeers = 0;
 
     [Header("UI")]
-    public TextMeshProUGUI beerCountText;  // 2) On utilise TMP ici
+    public TextMeshProUGUI beerCountText;
 
     void Start()
     {
@@ -35,6 +35,6 @@ public class PlayerInventory : MonoBehaviour
     void UpdateUI()
     {
         if (beerCountText != null)
-            beerCountText.text = $"Bière : {currentBeers}/{maxBeers}";
+            beerCountText.text = $"Beer : {currentBeers}/{maxBeers}";
     }
 }

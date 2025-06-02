@@ -70,6 +70,11 @@ public class BeerSlot : MonoBehaviour
         // 2) joueur doit être dans la zone
         if (playerInvInRange == null)
             return;
+        if (!GameManager.Instance.CanReceiveGold(0))
+        {
+            Debug.Log("Or max atteint, ne pas servir (client ne paiera pas).");
+            return;
+        }
 
         // 3) appui sur E → pose animée
         if (Keyboard.current.eKey.wasPressedThisFrame)
@@ -99,7 +104,7 @@ public class BeerSlot : MonoBehaviour
         // 3) Ajouter le SpriteRenderer
         var sr = beerInstance.AddComponent<SpriteRenderer>();
         sr.sprite = beerSprite;
-        sr.sortingOrder = 0;
+        sr.sortingOrder = 3;
 
         // 4) Ajouter le CircleCollider2D EN TRIGGER pour ne pas pousser le joueur
         //var col = beerInstance.AddComponent<CircleCollider2D>();

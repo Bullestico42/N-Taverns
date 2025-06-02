@@ -1,18 +1,21 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    [Header("Argent")]
-    public int gold = 0;
-    public TextMeshProUGUI goldText;  // 2) On utilise TMP ici
+    [Header("Caisse")]
+    public int goldInRegister = 0;
+    public TextMeshProUGUI goldText;
+
+    [Header("Or sur le joueur")]
+    public int goldOnPlayer = 0;
+    public int maxGoldOnPlayer = 100;
+    public TextMeshProUGUI goldOnPlayerText;
 
     void Awake()
     {
-        // Singleton basique
         if (Instance == null)
         {
             Instance = this;
@@ -29,16 +32,34 @@ public class GameManager : MonoBehaviour
         UpdateGoldUI();
     }
 
-    public void AddGold(int amount)
+    public bool CanReceiveGold(int amount)
     {
-        gold += amount;
-        Debug.Log($"Or ajouté : {amount}. Total = {gold}");
+        return goldOnPlayer + amount <= maxGoldOnPlayer;
+    }
+
+    public bool AddGoldToPlayer(int amount)
+    {
+        if (!CanReceiveGold(amount))
+            goldOnPlayer = maxGoldOnPlayer;
+        else
+            goldOnPlayer += amount;
+        UpdateGoldUI();
+        return true;
+    }
+
+    public void DepositGoldToRegister()
+    {
+        goldInRegister += goldOnPlayer;
+        goldOnPlayer = 10;
         UpdateGoldUI();
     }
 
-    private void UpdateGoldUI()
+    public void UpdateGoldUI()
     {
         if (goldText != null)
-            goldText.text = $"Or : {gold}";
+            goldText.text = $"Cash Register : {goldInRegister}";
+
+        if (goldOnPlayerText != null)
+            goldOnPlayerText.text = $"Pocket Gold : {goldOnPlayer}/{maxGoldOnPlayer}";
     }
 }
