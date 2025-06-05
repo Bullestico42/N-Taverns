@@ -40,9 +40,8 @@ public class ClientManager : MonoBehaviour
         isPaused = value;
     }
 
-    public void SetDifficulty(float newSpeed, float newWaitTime)
+    public void SetDifficulty(float newWaitTime)
     {
-        walkSpeed = newSpeed;
         waitTime = newWaitTime;
     }
 

@@ -60,8 +60,8 @@ public class GameManager : MonoBehaviour
 
     public void DepositGoldToRegister()
     {
-        goldInRegister += goldOnPlayer;
-        goldOnPlayer = 10;
+        goldInRegister += goldOnPlayer - 20;
+        goldOnPlayer = 20;
         UpdateGoldUI();
     }
 
@@ -90,17 +90,16 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseDifficulty()
     {
-        currentWalkSpeed *= 1.3f;
         currentWaitTime *= 0.85f;
 
         var cm = FindAnyObjectByType<ClientManager>();
         if (cm != null)
         {
-            cm.SetDifficulty(currentWalkSpeed, currentWaitTime);
+            cm.SetDifficulty(currentWaitTime);
             cm.spawnInterval *= 0.7f;
         }
         if (beerDispenser.refillInterval > 0.5)
-            beerDispenser.refillInterval-= 3f;
+            beerDispenser.refillInterval-= 0.1f;
     }
 
     public void UpdateGoldUI()

@@ -65,9 +65,9 @@ public class ShopManager : MonoBehaviour
 
     public void UpgradeBeerCapacity()
     {
-        if (GameManager.Instance.goldInRegister >= 100)
+        if (GameManager.Instance.goldInRegister >= 50)
         {
-            GameManager.Instance.PayAmountWithRegister(100);
+            GameManager.Instance.PayAmountWithRegister(50);
             playerInventory.maxBeers += 1;
             Debug.Log("Capacité de bières augmentée !");
             GameManager.Instance.UpdateGoldUI();
@@ -81,11 +81,11 @@ public class ShopManager : MonoBehaviour
 
     public void UpgradeClientSpawnRate()
     {
-        if (GameManager.Instance.goldInRegister >= 100)
+        if (GameManager.Instance.goldInRegister >= 50)
         {
             if (clientManager.spawnInterval > 1f)
             {
-                GameManager.Instance.PayAmountWithRegister(100);
+                GameManager.Instance.PayAmountWithRegister(50);
                 clientManager.spawnInterval += 0.2f;
                 Debug.Log($"Nouveau délai entre spawns : {clientManager.spawnInterval}s");
             }
@@ -102,11 +102,11 @@ public class ShopManager : MonoBehaviour
     
     public void UpgradeDispenserRefillSpeed()
     {
-        if (GameManager.Instance.goldInRegister >= 80)
+        if (GameManager.Instance.goldInRegister >= 50)
         {
             if (beerDispenser.refillInterval > 0.5f)
             {
-                GameManager.Instance.PayAmountWithRegister(80);
+                GameManager.Instance.PayAmountWithRegister(50);
                 beerDispenser.refillInterval -= 0.5f;
                 Debug.Log($"Nouvel intervalle de recharge : {beerDispenser.refillInterval}s");
             }
@@ -123,11 +123,11 @@ public class ShopManager : MonoBehaviour
 
     public void UpgradeDispenserCapacity()
     {
-        if (GameManager.Instance.goldInRegister >= 80)
+        if (GameManager.Instance.goldInRegister >= 50)
         {
             if (beerDispenser.maxBeers < 10)
             {
-                GameManager.Instance.PayAmountWithRegister(80);
+                GameManager.Instance.PayAmountWithRegister(50);
                 beerDispenser.maxBeers += 1;
                 Debug.Log($"Nouvelle capacité max du distributeur : {beerDispenser.maxBeers}");
             }
@@ -144,11 +144,11 @@ public class ShopManager : MonoBehaviour
 
     public void UpgradeClientImpatience()
     {
-        if (GameManager.Instance.goldInRegister >= 100)
+        if (GameManager.Instance.goldInRegister >= 50)
         {    
             if (clientManager.clientPrefabSettings.maxWaitTime > 3f)
             {
-                GameManager.Instance.PayAmountWithRegister(100);
+                GameManager.Instance.PayAmountWithRegister(50);
                 clientManager.clientPrefabSettings.maxWaitTime += 1f;
                 Debug.Log($"Nouvelle patience des clients : {clientManager.clientPrefabSettings.maxWaitTime}s");
             }
