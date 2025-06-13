@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "D:\\N-Taverns\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\N-Taverns\\Assets\\GameOver.cs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameOver.cs||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\N-Taverns\\Assets\\MainMenuController.cs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\MainMenuController.cs||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\N-Taverns\\Assets\\GameManager.cs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameManager.cs||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\N-Taverns\\Assets\\ShopManager.cs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\ShopManager.cs||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\N-Taverns\\Assets\\PlayerInventory.cs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerInventory.cs||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\N-Taverns\\Assets\\MenuSelection.cs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\MenuSelection.cs||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\N-Taverns\\Assets\\ToggleShop.cs||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\ToggleShop.cs||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
@@ -23,6 +47,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GameOver.cs",
+              "DocumentMoniker": "D:\\N-Taverns\\Assets\\GameOver.cs",
+              "RelativeDocumentMoniker": "Assets\\GameOver.cs",
+              "ToolTip": "D:\\N-Taverns\\Assets\\GameOver.cs",
+              "RelativeToolTip": "Assets\\GameOver.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T00:13:48.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "D:\\N-Taverns\\Assets\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\GameManager.cs",
+              "ToolTip": "D:\\N-Taverns\\Assets\\GameManager.cs",
+              "RelativeToolTip": "Assets\\GameManager.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T23:56:37.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlayerInventory.cs",
+              "DocumentMoniker": "D:\\N-Taverns\\Assets\\PlayerInventory.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerInventory.cs",
+              "ToolTip": "D:\\N-Taverns\\Assets\\PlayerInventory.cs",
+              "RelativeToolTip": "Assets\\PlayerInventory.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T23:56:06.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MenuSelection.cs",
+              "DocumentMoniker": "D:\\N-Taverns\\Assets\\MenuSelection.cs",
+              "RelativeDocumentMoniker": "Assets\\MenuSelection.cs",
+              "ToolTip": "D:\\N-Taverns\\Assets\\MenuSelection.cs",
+              "RelativeToolTip": "Assets\\MenuSelection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T23:51:56.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ShopManager.cs",
+              "DocumentMoniker": "D:\\N-Taverns\\Assets\\ShopManager.cs",
+              "RelativeDocumentMoniker": "Assets\\ShopManager.cs",
+              "ToolTip": "D:\\N-Taverns\\Assets\\ShopManager.cs",
+              "RelativeToolTip": "Assets\\ShopManager.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAABsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T23:43:09.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainMenuController.cs",
+              "DocumentMoniker": "D:\\N-Taverns\\Assets\\MainMenuController.cs",
+              "RelativeDocumentMoniker": "Assets\\MainMenuController.cs",
+              "ToolTip": "D:\\N-Taverns\\Assets\\MainMenuController.cs",
+              "RelativeToolTip": "Assets\\MainMenuController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T23:15:43.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ToggleShop.cs",
               "DocumentMoniker": "D:\\N-Taverns\\Assets\\ToggleShop.cs",
               "RelativeDocumentMoniker": "Assets\\ToggleShop.cs",
@@ -30,12 +127,11 @@
               "RelativeToolTip": "Assets\\ToggleShop.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAQwCcAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T17:04:46.647Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T17:04:46.647Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "BeerDispenser.cs",
               "DocumentMoniker": "D:\\N-Taverns\\Assets\\BeerDispenser.cs",
               "RelativeDocumentMoniker": "Assets\\BeerDispenser.cs",
@@ -43,8 +139,7 @@
               "RelativeToolTip": "Assets\\BeerDispenser.cs",
               "ViewState": "AgIAAE4AAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T16:59:21.492Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T16:59:21.492Z"
             }
           ]
         }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     public int goldInRegister = 0;
     public TextMeshProUGUI goldText;
 
+    [Header("Expérience & Niveau")]
     public int playerExp = 0;
     public int requiredExp = 150;
     public int playerLevel = 1;
@@ -21,8 +23,11 @@ public class GameManager : MonoBehaviour
     public int maxGoldOnPlayer = 100;
     public TextMeshProUGUI goldOnPlayerText;
 
-    private float currentWalkSpeed = 5f;
-    private float currentWaitTime = 15f;
+    // Valeurs par défaut pour Reset
+    private readonly float defaultWalkSpeed = 5f;
+    private readonly float defaultWaitTime = 15f;
+    private float currentWalkSpeed;
+    private float currentWaitTime;
 
     void Awake()
     {
@@ -30,6 +35,10 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            // Initialisation des valeurs courantes
+            currentWalkSpeed = defaultWalkSpeed;
+            currentWaitTime  = defaultWaitTime;
         }
         else
         {
@@ -42,6 +51,45 @@ public class GameManager : MonoBehaviour
         UpdateGoldUI();
         GainExp(0);
     }
+
+    void Update()
+    {
+        CheckGameOver();
+    }
+
+    // --- Gestion du Game Over ---
+
+    private void CheckGameOver()
+    {
+        // Si l'or du joueur atteint -20 ou moins
+        if (goldOnPlayer <= -20)
+        {
+            ResetGameState();
+            // Chargement de la scène Game Over (par nom ou index)
+            SceneManager.LoadScene("GameOver");
+        }
+    }
+
+    private void ResetGameState()
+    {
+        // Remise à zéro de toutes les variables de jeu
+        goldInRegister    = 0;
+        goldOnPlayer      = 0;
+        playerExp         = 0;
+        playerLevel       = 1;
+        requiredExp       = 150;
+        currentWalkSpeed  = defaultWalkSpeed;
+        currentWaitTime   = defaultWaitTime;
+
+        // Si vous modifiez ces valeurs ailleurs (spawnInterval, refillInterval…), remettez-les ici aussi :
+        if (beerDispenser != null)
+            beerDispenser.refillInterval = 4;
+        // (Assurez-vous d’exposer defaultRefillInterval dans votre BeerDispenser)
+
+        Time.timeScale = 1f;  // en cas de pause
+    }
+
+    // --- Vos méthodes existantes ---
 
     public bool CanReceiveGold(int amount)
     {
@@ -79,9 +127,10 @@ public class GameManager : MonoBehaviour
         {
             playerLevel++;
             IncreaseDifficulty();
-            playerExp = playerExp - requiredExp;
+            playerExp -= requiredExp;
             requiredExp = (requiredExp * 120) / 100;
         }
+
         if (playerExpText != null)
             playerExpText.text = $"Exp : {playerExp}/{requiredExp}";
         if (playerLevelText != null)
@@ -98,8 +147,9 @@ public class GameManager : MonoBehaviour
             cm.SetDifficulty(currentWaitTime);
             cm.spawnInterval *= 0.7f;
         }
-        if (beerDispenser.refillInterval > 0.5)
-            beerDispenser.refillInterval-= 0.1f;
+
+        if (beerDispenser.refillInterval > 0.5f)
+            beerDispenser.refillInterval -= 0.1f;
     }
 
     public void UpdateGoldUI()
