@@ -35,18 +35,22 @@ public class CashRegister : MonoBehaviour
             playerInvInRange = null;
         }
     }
-
     private void Update()
     {
         if (playerInvInRange == null)
             return;
 
-        if (Keyboard.current.eKey.wasPressedThisFrame)
+        // Clavier : touche E
+        bool keyboardPress = Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame;
+
+        // Manette / borne : bouton A (XInput)
+        bool gamepadPress = Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame;
+
+        if (keyboardPress || gamepadPress)
         {
             TryDeposit();
         }
     }
-
     private void TryDeposit()
     {
         var gm = GameManager.Instance;

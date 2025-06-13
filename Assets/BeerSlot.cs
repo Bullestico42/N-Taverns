@@ -60,7 +60,6 @@ public class BeerSlot : MonoBehaviour
         if (inv != null && inv == playerInvInRange)
             playerInvInRange = null;
     }
-
     private void Update()
     {
         // 1) le client doit être assigné, arrivé, et pas déjà servi
@@ -76,8 +75,11 @@ public class BeerSlot : MonoBehaviour
             return;
         }
 
-        // 3) appui sur E → pose animée
-        if (Keyboard.current.eKey.wasPressedThisFrame)
+        // 3) appui sur E (clavier) ou bouton A (manette)
+        bool keyboardPress = Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame;
+        bool gamepadPress = Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame;
+
+        if (keyboardPress || gamepadPress)
         {
             if (playerInvInRange.RemoveBeer())
             {
@@ -90,7 +92,6 @@ public class BeerSlot : MonoBehaviour
             }
         }
     }
-
     private void PlaceBeerWithSlide()
     {
         // 1) Déterminer la position de départ (position du joueur)

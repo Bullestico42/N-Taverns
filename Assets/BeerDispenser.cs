@@ -68,14 +68,19 @@ public class BeerDispenser : MonoBehaviour
         if (inv != null && inv == playerInvInRange)
             playerInvInRange = null;
     }
-
     // Gère l'appui sur E une seule fois par frame, si le joueur est dans la zone
     private void Update()
     {
         if (playerInvInRange == null)
             return;
 
-        if (!Keyboard.current.eKey.wasPressedThisFrame)
+        // Clavier : touche E
+        bool keyboardPress = Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame;
+
+        // Manette / borne arcade : bouton A (XInput)
+        bool gamepadPress = Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame;
+
+        if (!keyboardPress && !gamepadPress)
             return;
 
         if (GameManager.Instance.goldOnPlayer >= GameManager.Instance.maxGoldOnPlayer)
@@ -107,7 +112,6 @@ public class BeerDispenser : MonoBehaviour
             Debug.Log("Distributeur vide.");
         }
     }
-
     // Retire une bière du visuel et décrémente le stock
     private void TakeBeerFromDispenser()
     {

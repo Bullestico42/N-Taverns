@@ -33,12 +33,27 @@ public class TopDownMovement : MonoBehaviour
 
     void Update()
     {
-        var kb = Keyboard.current;
         moveInput = Vector2.zero;
-        if (kb.wKey.isPressed) moveInput.y += 1;
-        if (kb.sKey.isPressed) moveInput.y -= 1;
-        if (kb.aKey.isPressed) moveInput.x -= 1;
-        if (kb.dKey.isPressed) moveInput.x += 1;
+
+        // 🎮 Clavier
+        var kb = Keyboard.current;
+        if (kb != null)
+        {
+            if (kb.wKey.isPressed) moveInput.y += 1;
+            if (kb.sKey.isPressed) moveInput.y -= 1;
+            if (kb.aKey.isPressed) moveInput.x -= 1;
+            if (kb.dKey.isPressed) moveInput.x += 1;
+        }
+
+        // 🕹️ Manette / Stick arcade (XInput)
+        var gp = Gamepad.current;
+        if (gp != null)
+        {
+            Vector2 stick = gp.leftStick.ReadValue();
+            if (stick.magnitude > 0.1f) // remplace le clavier si utilisé
+                moveInput = stick;
+        }
+
         moveInput = moveInput.normalized;
         UpdateAnimator();
     }
@@ -55,7 +70,7 @@ public class TopDownMovement : MonoBehaviour
         Vector2 targetPos = rb.position + moveInput * speed * Time.fixedDeltaTime;
         rb.MovePosition(targetPos);
 
-        // Flip sprite on axis movement
+        // Flip sprite sur l'axe horizontal
         if (moveInput.x > 0)
             sr.flipX = false;
         else if (moveInput.x < 0)
