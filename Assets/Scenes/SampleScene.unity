@@ -4252,7 +4252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gold : 0'
+  m_text: 'Register Gold : 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 23a7d196ddf20b24699f46caabdae0dd, type: 2}
   m_sharedMaterial: {fileID: 2496463729383845431, guid: 23a7d196ddf20b24699f46caabdae0dd, type: 2}
@@ -7603,7 +7603,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gold : 0'
+  m_text: 'Pocket Gold : 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 23a7d196ddf20b24699f46caabdae0dd, type: 2}
   m_sharedMaterial: {fileID: 2496463729383845431, guid: 23a7d196ddf20b24699f46caabdae0dd, type: 2}

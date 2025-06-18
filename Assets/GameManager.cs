@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public int goldInRegister = 0;
     public TextMeshProUGUI goldText;
 
-    [Header("ExpÈrience & Niveau")]
+    [Header("Exp√©rience & Niveau")]
     public int playerExp = 0;
     public int requiredExp = 150;
     public int playerLevel = 1;
@@ -19,26 +19,26 @@ public class GameManager : MonoBehaviour
     public BeerDispenser beerDispenser;
 
     [Header("Or sur le joueur")]
-    public int goldOnPlayer = 0;
+    public int goldOnPlayer = 10;
     public int maxGoldOnPlayer = 100;
     public TextMeshProUGUI goldOnPlayerText;
 
-    // Valeurs par dÈfaut pour Reset
     private readonly float defaultWalkSpeed = 5f;
     private readonly float defaultWaitTime = 15f;
     private float currentWalkSpeed;
     private float currentWaitTime;
 
-    void Awake()
+    private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
 
-            // Initialisation des valeurs courantes
             currentWalkSpeed = defaultWalkSpeed;
-            currentWaitTime  = defaultWaitTime;
+            currentWaitTime = defaultWaitTime;
+
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
@@ -46,50 +46,86 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Start()
+    private void Start()
     {
+        if (SceneManager.GetActiveScene().name == "SampleScene")
+        {
+            ReconnectSceneObjects();
+            ResetGameState();
+        }
+    }
+
+    private void Update()
+    {
+        CheckGameOver();
+    }
+    private void CheckGameOver()
+    {
+        if (goldOnPlayer <= -20)
+        {
+            ResetGameState();
+            SceneManager.LoadScene("GameOver");
+        }
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "GameScene" || scene.name == "SampleScene")
+        {
+            ReconnectSceneObjects();
+            ResetGameState();
+        }
+    }
+
+    public void ReconnectSceneObjects()
+    {
+        goldText = FindTextObject("GoldText");
+        goldOnPlayerText = FindTextObject("GoldOnPlayerText");
+        playerExpText = FindTextObject("PlayerExpText");
+        playerLevelText = FindTextObject("PlayerLevelText");
+        beerDispenser = FindAnyObjectByType<BeerDispenser>();
+
+        Debug.Log("üîÅ ReconnectSceneObjects ex√©cut√© :");
+        Debug.Log($" - goldText trouv√© : {goldText != null}");
+        Debug.Log($" - goldOnPlayerText trouv√© : {goldOnPlayerText != null}");
+        Debug.Log($" - playerExpText trouv√© : {playerExpText != null}");
+        Debug.Log($" - playerLevelText trouv√© : {playerLevelText != null}");
+        Debug.Log($" - beerDispenser trouv√© : {beerDispenser != null}");
+
         UpdateGoldUI();
         GainExp(0);
     }
 
-    void Update()
+    private TextMeshProUGUI FindTextObject(string tagOrName)
     {
-        CheckGameOver();
-    }
-
-    // --- Gestion du Game Over ---
-
-    private void CheckGameOver()
-    {
-        // Si l'or du joueur atteint -20 ou moins
-        if (goldOnPlayer <= -20)
+        GameObject obj = GameObject.FindWithTag(tagOrName);
+        if (obj == null)
         {
-            ResetGameState();
-            // Chargement de la scËne Game Over (par nom ou index)
-            SceneManager.LoadScene("GameOver");
+            obj = GameObject.Find(tagOrName); // fallback si pas de tag
         }
+
+        if (obj != null)
+            return obj.GetComponent<TextMeshProUGUI>();
+
+        return null;
     }
 
-    private void ResetGameState()
+    public void ResetGameState()
     {
-        // Remise ‡ zÈro de toutes les variables de jeu
-        goldInRegister    = 0;
-        goldOnPlayer      = 0;
-        playerExp         = 0;
-        playerLevel       = 1;
-        requiredExp       = 150;
-        currentWalkSpeed  = defaultWalkSpeed;
-        currentWaitTime   = defaultWaitTime;
+        goldInRegister = 0;
+        goldOnPlayer = 10;
+        playerExp = 0;
+        playerLevel = 1;
+        requiredExp = 100;
+        currentWalkSpeed = defaultWalkSpeed;
+        currentWaitTime = defaultWaitTime;
 
-        // Si vous modifiez ces valeurs ailleurs (spawnInterval, refillIntervalÖ), remettez-les ici aussi :
         if (beerDispenser != null)
-            beerDispenser.refillInterval = 4;
-        // (Assurez-vous díexposer defaultRefillInterval dans votre BeerDispenser)
+            beerDispenser.refillInterval = 4f;
 
-        Time.timeScale = 1f;  // en cas de pause
+        UpdateGoldUI();
+        GainExp(0);
+        Time.timeScale = 1f;
     }
-
-    // --- Vos mÈthodes existantes ---
 
     public bool CanReceiveGold(int amount)
     {
@@ -102,6 +138,7 @@ public class GameManager : MonoBehaviour
             goldOnPlayer = maxGoldOnPlayer;
         else
             goldOnPlayer += amount;
+
         UpdateGoldUI();
         return true;
     }
@@ -128,11 +165,12 @@ public class GameManager : MonoBehaviour
             playerLevel++;
             IncreaseDifficulty();
             playerExp -= requiredExp;
-            requiredExp = (requiredExp * 120) / 100;
+            requiredExp = Mathf.RoundToInt(requiredExp * 1.2f);
         }
 
         if (playerExpText != null)
             playerExpText.text = $"Exp : {playerExp}/{requiredExp}";
+
         if (playerLevelText != null)
             playerLevelText.text = $"Lvl : {playerLevel}";
     }
@@ -148,7 +186,7 @@ public class GameManager : MonoBehaviour
             cm.spawnInterval *= 0.7f;
         }
 
-        if (beerDispenser.refillInterval > 0.5f)
+        if (beerDispenser != null && beerDispenser.refillInterval > 0.5f)
             beerDispenser.refillInterval -= 0.1f;
     }
 
