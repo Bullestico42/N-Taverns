@@ -1,22 +1,48 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class MainMenuController : MonoBehaviour
 {
-    // Appelé par le bouton Jouer
+    [SerializeField] private GameObject defaultSelectedButton; // bouton par dÃ©faut (Jouer)
+
+    private void OnEnable()
+    {
+        if (defaultSelectedButton != null)
+            EventSystem.current.SetSelectedGameObject(defaultSelectedButton);
+    }
+
+    // AppelÃ© par bouton Jouer (UI ou manette bouton A)
     public void PlayGame()
     {
-        // Charge la scène d’index 1 dans Build Settings (votre jeu)
         SceneManager.LoadScene("SampleScene");
     }
 
-    // Appelé par le bouton Quitter
+    // AppelÃ© par bouton Quitter
     public void QuitGame()
     {
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-        #else
+#else
         Application.Quit();
-        #endif
+#endif
+    }
+
+    private void Update()
+    {
+        if (Gamepad.current == null) return;
+
+        // Bouton A = jouer
+        if (Gamepad.current.buttonSouth.wasPressedThisFrame)
+        {
+            PlayGame();
+        }
+
+        // Bouton B = quitter
+        if (Gamepad.current.buttonEast.wasPressedThisFrame)
+        {
+            QuitGame();
+        }
     }
 }
