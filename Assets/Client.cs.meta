@@ -1,2 +1,16 @@
 fileFormatVersion: 2
 guid: d2049f05c59d2734aaf8e35ae4e211ff
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - targetSlot: {instanceID: 0}
+  - exitPoint: {instanceID: 0}
+  - walkingSprite: {instanceID: 0}
+  - sittingSprite: {instanceID: 0}
+  - anger1: {fileID: 5528778390874883100, guid: 7a9b21868499904409f8adfde770bbca, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -54,8 +54,12 @@ MonoBehaviour:
   exitPoint: {fileID: 0}
   drinkDuration: 3
   price: 10
-  maxWaitTime: 15
-  anger1: {fileID: 5528778390874883100, guid: 7a9b21868499904409f8adfde770bbca, type: 3}
+  walkingSprite: {fileID: -5617183670037513706, guid: ec10b46feb584e647b5bebf8b2c7afb2, type: 3}
+  sittingSprite: {fileID: 7963507245444735400, guid: ec10b46feb584e647b5bebf8b2c7afb2, type: 3}
+  angerBubbleSprite: {fileID: 21300000, guid: d9b5ca41ab6a0dc46b312c4231fca476, type: 3}
+  angerBubbleOffset: {x: -2, y: 2.7}
+  angerBubbleScale: 0.5
+  maxWaitTime: 1
 --- !u!212 &-1279787892534253565
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -100,7 +104,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -7715902427486114116, guid: ec10b46feb584e647b5bebf8b2c7afb2, type: 3}
+  m_Sprite: {fileID: -4166001204065165277, guid: ec10b46feb584e647b5bebf8b2c7afb2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -184,7 +188,7 @@ Animator:
   m_GameObject: {fileID: 6147653823978551064}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f56b3a0746ba2a142ab55c7b361e32bf, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9da692650091f384ca3d91db9e11d233, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
