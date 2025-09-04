@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b83cfcb3568a19a43b2f26104359ca45
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 205182
+  packageName: 3 Direction NPC Characters
+  packageVersion: 1.0
+  assetPath: Assets/3DNPC_Characters/Male_NPC/M2_down_idle.anim
+  uploadId: 458238

@@ -12,7 +12,7 @@ public class Client : MonoBehaviour
 
     [Header("Impatience")]
     public float maxWaitTime = 15f;
-    public GameObject impatienceIndicator;
+    public GameObject anger1;
 
     private enum State { Walking, WaitingBeer, Drinking, Leaving }
     private State state;
@@ -22,8 +22,8 @@ public class Client : MonoBehaviour
     void Start()
     {
         state = State.Walking;
-        if (impatienceIndicator != null)
-            impatienceIndicator.SetActive(false);
+        if (anger1 != null)
+            anger1.SetActive(false);
         targetSlot.AssignClient();
         targetSlot.OnBeerPlaced += OnBeerArrived;
     }
@@ -55,8 +55,8 @@ public class Client : MonoBehaviour
         float threshold = maxWaitTime * 0.7f;
         yield return new WaitForSeconds(threshold);
 
-        if (impatienceIndicator != null)
-            impatienceIndicator.SetActive(true);
+        if (anger1 != null)
+            anger1.SetActive(true);
 
         yield return new WaitForSeconds(maxWaitTime - threshold);
 
@@ -70,11 +70,11 @@ public class Client : MonoBehaviour
 
     private void WalkToExit()
     {
-        if (impatienceIndicator != null)
-            impatienceIndicator.SetActive(false);
+        if (anger1 != null)
+            anger1.SetActive(false);
 
         sr = GetComponent<SpriteRenderer>();
-        sr.flipX = false;
+        sr.flipX = true;
         transform.position = Vector3.MoveTowards(transform.position, exitPoint.position, walkSpeed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position, exitPoint.position) < 0.05f)
@@ -87,11 +87,11 @@ public class Client : MonoBehaviour
     {
         if (state != State.WaitingBeer) return;
 
-        if (impatienceRoutine != null)
+        if (anger1 != null)
             StopCoroutine(impatienceRoutine);
 
-        if (impatienceIndicator != null)
-            impatienceIndicator.SetActive(false);
+        if (anger1 != null)
+            anger1.SetActive(false);
         state = State.Drinking;
         StartCoroutine(DrinkAndPay());
     }

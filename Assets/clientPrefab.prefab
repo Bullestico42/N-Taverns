@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -1279787892534253565}
   - component: {fileID: -738720683877505128}
   - component: {fileID: -3521084509828613568}
+  - component: {fileID: -3334679261064577576}
   m_Layer: 3
   m_Name: clientPrefab
   m_TagString: Untagged
@@ -54,7 +55,7 @@ MonoBehaviour:
   drinkDuration: 3
   price: 10
   maxWaitTime: 15
-  impatienceIndicator: {fileID: 2167081486357028208}
+  anger1: {fileID: 5528778390874883100, guid: 7a9b21868499904409f8adfde770bbca, type: 3}
 --- !u!212 &-1279787892534253565
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -99,9 +100,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 4120901811166270815, guid: 1307f730d85b7954b90ba61ce819cd18, type: 3}
+  m_Sprite: {fileID: -7715902427486114116, guid: ec10b46feb584e647b5bebf8b2c7afb2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 5.08, y: 5.12}
@@ -173,6 +174,28 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2.2
+--- !u!95 &-3334679261064577576
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147653823978551064}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f56b3a0746ba2a142ab55c7b361e32bf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &5956344234953333100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -246,11 +269,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a9b21868499904409f8adfde770bbca, type: 3}
---- !u!1 &2167081486357028208 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5528778390874883100, guid: 7a9b21868499904409f8adfde770bbca, type: 3}
-  m_PrefabInstance: {fileID: 5956344234953333100}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8356303231160638205 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2404537397389919121, guid: 7a9b21868499904409f8adfde770bbca, type: 3}
