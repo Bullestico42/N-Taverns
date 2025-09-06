@@ -172,7 +172,7 @@ public class Client : MonoBehaviour
 
     private void SwitchToWalking()
     {
-        if (anim != null) anim.enabled = false; // mets true si tu veux rejouer une anim de marche
+        if (anim != null) anim.enabled = true; // mets true si tu veux rejouer une anim de marche
         if (sr != null && walkingSprite != null) sr.sprite = walkingSprite;
     }
 

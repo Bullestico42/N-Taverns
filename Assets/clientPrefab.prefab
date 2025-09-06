@@ -54,7 +54,7 @@ MonoBehaviour:
   exitPoint: {fileID: 0}
   drinkDuration: 3
   price: 10
-  walkingSprite: {fileID: -5617183670037513706, guid: ec10b46feb584e647b5bebf8b2c7afb2, type: 3}
+  walkingSprite: {fileID: -4166001204065165277, guid: ec10b46feb584e647b5bebf8b2c7afb2, type: 3}
   sittingSprite: {fileID: 7963507245444735400, guid: ec10b46feb584e647b5bebf8b2c7afb2, type: 3}
   angerBubbleSprite: {fileID: 21300000, guid: d9b5ca41ab6a0dc46b312c4231fca476, type: 3}
   angerBubbleOffset: {x: -2, y: 2.7}
@@ -104,7 +104,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -4166001204065165277, guid: ec10b46feb584e647b5bebf8b2c7afb2, type: 3}
+  m_Sprite: {fileID: -5617183670037513706, guid: ec10b46feb584e647b5bebf8b2c7afb2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

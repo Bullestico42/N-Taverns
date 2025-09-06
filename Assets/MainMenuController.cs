@@ -16,7 +16,7 @@ public class MainMenuController : MonoBehaviour
     // Appelé par bouton Jouer (UI ou manette bouton A)
     public void PlayGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
     }
 
     // Appelé par bouton Quitter
