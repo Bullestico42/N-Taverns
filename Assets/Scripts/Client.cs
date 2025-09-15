@@ -84,7 +84,7 @@ public class Client : MonoBehaviour
 
         // Liaison slot
         targetSlot.AssignClient();
-        targetSlot.OnBeerPlaced += OnBeerArrived;
+        targetSlot.OnBeerPlaced += ReceiveBeer;
     }
 
     void Update()
@@ -147,7 +147,14 @@ public class Client : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void OnBeerArrived()
+    public bool IsWaitingBeer => state == State.WaitingBeer;
+
+    public void ForceServe()
+    {
+        ReceiveBeer();
+    }
+
+    public void ReceiveBeer()
     {
         if (state != State.WaitingBeer) return;
 
@@ -190,7 +197,7 @@ public class Client : MonoBehaviour
     void OnDestroy()
     {
         if (targetSlot != null)
-            targetSlot.OnBeerPlaced -= OnBeerArrived;
+            targetSlot.OnBeerPlaced -= ReceiveBeer;
     }
 
     // ---- Helpers ----
