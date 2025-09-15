@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using System.Collections;
 using TMPro;
 
@@ -8,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     [Header("HUD Panel")]
-    [SerializeField] private UnityEngine.UI.Image pocketGoldPanel;
+    [SerializeField] private Image pocketGoldPanel;
 
     [Header("Caisse")]
     public int goldInRegister = 10;
@@ -33,6 +34,15 @@ public class GameManager : MonoBehaviour
     private float currentWalkSpeed;
     public float currentWaitTime;
 
+    // ======== Flèche (SpriteRenderer en scène) ========
+    [Header("Arrow (SpriteRenderer)")]
+    [SerializeField] private SpriteRenderer arrowSprite; // assigne ton objet SpriteRenderer ici
+    [SerializeField] private float moveDistance = 0.5f;  // déplacement local Y entre 0 et -0.5
+    [SerializeField] private float moveDuration = 0.5f;  // durée d’un aller (plus petit = plus rapide)
+    private Coroutine arrowCoroutine;
+    private bool arrowRotatedOnce = false;
+    // ==================================================
+
     private void Awake()
     {
         if (Instance == null)
@@ -41,7 +51,10 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
 
             currentWalkSpeed = defaultWalkSpeed;
-            currentWaitTime = defaultWaitTime;
+            currentWaitTime  = defaultWaitTime;
+
+            if (arrowSprite != null)
+                arrowSprite.gameObject.SetActive(false);
 
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
@@ -64,8 +77,6 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log($"[GameManager] Scene loaded: {scene.name}");
-
         if (scene.name == "GameScene" || scene.name == "SampleScene")
         {
             StartCoroutine(ReconnectAndResetWithRetry());
@@ -79,9 +90,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator ReconnectAndResetWithRetry()
     {
         yield return null;
-
-        if (this == null || gameObject == null)
-            yield break;
+        if (this == null || gameObject == null) yield break;
 
         const float timeout = 2f;
         float t = 0f;
@@ -91,10 +100,7 @@ public class GameManager : MonoBehaviour
         {
             t += Time.unscaledDeltaTime;
             yield return null;
-
-            if (this == null || gameObject == null)
-                yield break;
-
+            if (this == null || gameObject == null) yield break;
             ok = TryReconnectSceneObjects();
         }
 
@@ -120,15 +126,15 @@ public class GameManager : MonoBehaviour
         {
             GameObject panelObj = GameObject.Find("HUDPanel");
             if (panelObj != null)
-                pocketGoldPanel = panelObj.GetComponent<UnityEngine.UI.Image>();
+                pocketGoldPanel = panelObj.GetComponent<Image>();
         }
 
         beerDispenser = FindAnyObjectByType<BeerDispenser>();
 
+        if (arrowSprite != null)
+            arrowSprite.gameObject.SetActive(false);
+
         bool allFound = goldText && goldOnPlayerText && playerExpText && playerLevelText && pocketGoldPanel;
-
-        Debug.Log($"[GameManager] UI reconnect: gold:{goldText != null}, pocket:{goldOnPlayerText != null}, exp:{playerExpText != null}, level:{playerLevelText != null}, panel:{pocketGoldPanel != null}");
-
         return allFound;
     }
 
@@ -136,10 +142,7 @@ public class GameManager : MonoBehaviour
     {
         var all = FindObjectsOfType<TextMeshProUGUI>(true);
         foreach (var tmp in all)
-        {
-            if (tmp.name == name)
-                return tmp;
-        }
+            if (tmp.name == name) return tmp;
         return null;
     }
 
@@ -152,23 +155,22 @@ public class GameManager : MonoBehaviour
     public void ResetGameState()
     {
         goldInRegister = 0;
-        goldOnPlayer = 10;
-        playerExp = 0;
-        playerLevel = 1;
-        requiredExp = 100;
+        goldOnPlayer   = 10;
+        playerExp      = 0;
+        playerLevel    = 1;
+        requiredExp    = 100;
         currentWalkSpeed = defaultWalkSpeed;
-        currentWaitTime = defaultWaitTime;
+        currentWaitTime  = defaultWaitTime;
 
         if (beerDispenser != null)
             beerDispenser.refillInterval = 4f;
 
         Time.timeScale = 1f;
+
+        StopArrowAnim(); // reset flèche
     }
 
-    public bool CanReceiveGold(int amount)
-    {
-        return goldOnPlayer + amount <= maxGoldOnPlayer;
-    }
+    public bool CanReceiveGold(int amount) => goldOnPlayer + amount <= maxGoldOnPlayer;
 
     public bool AddGoldToPlayer(int amount)
     {
@@ -183,9 +185,7 @@ public class GameManager : MonoBehaviour
 
     public void StealFromRegister()
     {
-        Debug.Log("MES SOUUUUUS");
-        if (goldInRegister > 0)
-            goldInRegister -= 10;
+        if (goldInRegister > 0) goldInRegister -= 10;
         UpdateGoldUI();
     }
 
@@ -219,10 +219,8 @@ public class GameManager : MonoBehaviour
 
     private void UpdateExpUI()
     {
-        if (playerExpText != null)
-            playerExpText.text = $"Exp : {playerExp}/{requiredExp}";
-        if (playerLevelText != null)
-            playerLevelText.text = $"Lvl : {playerLevel}";
+        if (playerExpText   != null) playerExpText.text   = $"Exp : {playerExp}/{requiredExp}";
+        if (playerLevelText != null) playerLevelText.text = $"Lvl : {playerLevel}";
     }
 
     public void IncreaseDifficulty()
@@ -233,12 +231,67 @@ public class GameManager : MonoBehaviour
         if (cm != null)
         {
             cm.SetDifficulty(currentWaitTime);
-            cm.spawnInterval *= 0.7f;
+            cm.spawnInterval *= 0.5f;
+        }
+    }
+
+    // =================== ARROW ANIM ===================
+    public void setArrowAnim()
+    {
+        if (arrowSprite == null) return;
+
+        if (!arrowSprite.gameObject.activeSelf)
+            arrowSprite.gameObject.SetActive(true);
+
+        // rotation 90° sur Z une seule fois
+        if (!arrowRotatedOnce)
+        {
+            arrowSprite.transform.localRotation = Quaternion.Euler(0f, 0f, 90f);
+            arrowRotatedOnce = true;
         }
 
-        if (beerDispenser != null && beerDispenser.refillInterval > 0.5f)
-            beerDispenser.refillInterval -= 0.1f;
+        if (arrowCoroutine == null)
+            arrowCoroutine = StartCoroutine(ArrowLoop());
     }
+
+    private void StopArrowAnim()
+    {
+        if (arrowCoroutine != null)
+        {
+            StopCoroutine(arrowCoroutine);
+            arrowCoroutine = null;
+        }
+
+        if (arrowSprite != null)
+            arrowSprite.gameObject.SetActive(false);
+    }
+
+    private IEnumerator ArrowLoop()
+    {
+        // Position de base au moment du start
+        Vector3 basePos = arrowSprite.transform.localPosition;
+        Vector3 downPos = basePos + Vector3.down * moveDistance;
+
+        float t = 0f;
+
+        // Tant que l’or est au max, on anime ; sinon on sort proprement
+        while (goldOnPlayer == maxGoldOnPlayer)
+        {
+            t += Time.deltaTime;
+
+            // PingPong entre 0 et 1 sur une durée "moveDuration"
+            float k = Mathf.PingPong(t / moveDuration, 1f);
+            arrowSprite.transform.localPosition = Vector3.Lerp(basePos, downPos, k);
+
+            yield return null;
+        }
+
+        // on n’est plus au max → reset et couper
+        arrowSprite.transform.localPosition = basePos;
+        arrowSprite.gameObject.SetActive(false);
+        arrowCoroutine = null;
+    }
+    // ==================================================
 
     private void UpdatePocketGoldPanelColor()
     {
@@ -251,9 +304,15 @@ public class GameManager : MonoBehaviour
         else if (goldOnPlayer < 50)
             pocketGoldPanel.color = Color.yellow;
         else if (goldOnPlayer == maxGoldOnPlayer)
+        {
             pocketGoldPanel.color = Color.blue;
+            setArrowAnim();           // démarre/continue l’anim
+        }
         else
+        {
             pocketGoldPanel.color = Color.green;
+            StopArrowAnim();          // coupe instant si plus max
+        }
     }
 
     public void UpdateGoldUI()
