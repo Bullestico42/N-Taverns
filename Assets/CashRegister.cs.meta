@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: f00999ee207740d4a8d6915c160472d0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - depositSound: {fileID: 8300000, guid: dbfb93091ee957144969c11115510ba1, type: 3}
+  - goldParticles: {fileID: 7151723172122599306, guid: 709144698c5ef2841a9e6246abc2f6c9, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

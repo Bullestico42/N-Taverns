@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d11791eabff1f0d4fa553570b2c1b256
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 205182
+  packageName: 3 Direction NPC Characters
+  packageVersion: 1.0
+  assetPath: Assets/3DNPC_Characters/Male_NPC/M3_up_walk.anim
+  uploadId: 458238
