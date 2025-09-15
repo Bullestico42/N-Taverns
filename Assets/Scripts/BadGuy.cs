@@ -146,7 +146,7 @@ public class BadGuy : MonoBehaviour
         if (anim != null) anim.SetInteger(StateHash, 0);
     }
 
-    private void SwitchToUpwalk()
+    private void SwitchToUpwak()
     {
         if (anim != null) anim.SetInteger(StateHash, 1);
     }

@@ -198,6 +198,7 @@ public class Client : MonoBehaviour
     {
         if (targetSlot != null)
             targetSlot.OnBeerPlaced -= ReceiveBeer;
+
     }
 
     // ---- Helpers ----
