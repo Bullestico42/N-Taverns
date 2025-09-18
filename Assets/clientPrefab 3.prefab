@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3521084509828613568}
   - component: {fileID: -3334679261064577576}
   m_Layer: 3
-  m_Name: clientPrefab
+  m_Name: clientPrefab 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,8 +56,8 @@ MonoBehaviour:
   price: 10
   CoinsSound: {fileID: 8300000, guid: 0f191ec536f3deb4faba379f750f58d0, type: 3}
   AngerSound: {fileID: 8300000, guid: 5e868f60a89c9cf4b81e96c24e6e69ba, type: 3}
-  walkingSprite: {fileID: -4166001204065165277, guid: ec10b46feb584e647b5bebf8b2c7afb2, type: 3}
-  sittingSprite: {fileID: 7963507245444735400, guid: ec10b46feb584e647b5bebf8b2c7afb2, type: 3}
+  walkingSprite: {fileID: 5661381716366433448, guid: 106dc2a4656ddf74eb2dde2d94ccb8da, type: 3}
+  sittingSprite: {fileID: -2768383673831368683, guid: 106dc2a4656ddf74eb2dde2d94ccb8da, type: 3}
   plusBubbleSprite: {fileID: -3731830888615903771, guid: d82c37c4730cc244d946a83a89c53f5a, type: 3}
   plusBubbleOffset: {x: -1, y: 2.7}
   plusBubbleScale: 3
@@ -109,7 +109,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -5617183670037513706, guid: ec10b46feb584e647b5bebf8b2c7afb2, type: 3}
+  m_Sprite: {fileID: -5105122627558443654, guid: 106dc2a4656ddf74eb2dde2d94ccb8da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -193,7 +193,7 @@ Animator:
   m_GameObject: {fileID: 6147653823978551064}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9da692650091f384ca3d91db9e11d233, type: 2}
+  m_Controller: {fileID: 9100000, guid: dd4379ddd286fcb4895fb2ce2f38edc8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

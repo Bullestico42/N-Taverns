@@ -226,7 +226,9 @@ public class GameManager : MonoBehaviour
     public void IncreaseDifficulty()
     {
         currentWaitTime *= 0.85f;
-
+        var sm = FindAnyObjectByType<ShopManager>();
+        if ((playerLevel % 5) == 0)
+            sm.SuperEquilibrage();
         var cm = FindAnyObjectByType<ClientManager>();
         if (cm != null)
         {

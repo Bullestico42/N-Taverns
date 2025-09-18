@@ -36,6 +36,7 @@ public class CashRegister : MonoBehaviour
             playerInvInRange = null;
         }
     }
+
     private void Update()
     {
         if (playerInvInRange == null)

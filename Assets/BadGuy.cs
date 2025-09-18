@@ -20,6 +20,7 @@ public class BadGuy : MonoBehaviour
     public bool wasHit = false;
     public AudioClip ExplosionDeCaca;
     public AudioClip ExplosionDeHit;
+    public AudioClip ParrinoNiele;
     public int hitNums = 0;
     public int stealLoop = 5;
 
@@ -79,11 +80,13 @@ public class BadGuy : MonoBehaviour
     {
         gameObject.SetActive(true);
         Debug.Log("JARRRRRIIIIIIIIIIIVE");
+        if (ParrinoNiele != null)
+            audioSource.PlayOneShot(ParrinoNiele);
         SwitchToDownwalk();
         StartCoroutine(MoveToTarget());
         //Rendre Le sprite visible.
-        //Se deplace jusqu'à la caisse
-        //peut être perturbé durant 5 secondes
+        //Se deplace jusqu'ï¿½ la caisse
+        //peut ï¿½tre perturbï¿½ durant 5 secondes
         //repars avec 50 golds de la caisse l'argent
     }
 
@@ -134,7 +137,7 @@ public class BadGuy : MonoBehaviour
 
     public IEnumerator  TryTriggerBadGuy()
     {
-        int randomNumber = Random.Range(1,6);
+        int randomNumber = Random.Range(1,5);
         Debug.Log("HEYYYYY");
         if (randomNumber == 3)
         {
@@ -146,7 +149,7 @@ public class BadGuy : MonoBehaviour
 
     private void SwitchToDownwalk()
     {
-        //if (anim != null) anim.enabled = false; // évite qu'il écrase le sprite
+        //if (anim != null) anim.enabled = false; // ï¿½vite qu'il ï¿½crase le sprite
         //if (sr != null && sittingSprite != null) sr.sprite = sittingSprite;
 
         if (anim != null) anim.SetInteger(StateHash, 0);

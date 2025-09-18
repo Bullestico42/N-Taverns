@@ -7,7 +7,7 @@ public class ClientManager : MonoBehaviour
     [Header("Réglages des clients")]
     public Client clientPrefabSettings;
 
-    public GameObject clientPrefab;
+    public GameObject[] clientPrefabs;
     public Transform[] spawnPoints;
     public BeerSlot[] beerSlots;
     public Transform exitPoint;
@@ -53,13 +53,13 @@ public class ClientManager : MonoBehaviour
         var slot = freeSlots[Random.Range(0, freeSlots.Length)];
         var spawn = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
-        var go = Instantiate(clientPrefab, spawn.position, Quaternion.identity);
+        GameObject prefabToSpawn = clientPrefabs[Random.Range(0, clientPrefabs.Length)];
+        var go = Instantiate(prefabToSpawn, spawn.position, Quaternion.identity);
         var client = go.GetComponent<Client>();
 
         client.walkSpeed = walkSpeed;
         client.maxWaitTime = waitTime;
         client.targetSlot = slot;
         client.exitPoint = exitPoint;
-        Debug.Log($"WAIT TIME SPAWNED LA {waitTime}");
     }
 }

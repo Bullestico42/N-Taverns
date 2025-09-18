@@ -15,10 +15,19 @@ public class BeerSlot : MonoBehaviour
     private bool clientAssigned = false;
     private bool serveAllowed = false;
     private GameObject beerInstance;
+    private AudioSource audioSource;
+    public AudioClip depositSound;
     private PlayerInventory playerInvInRange;
 
     public bool IsOccupied => clientAssigned;
     public Vector3 SeatPosition => transform.position + Vector3.up * 0.6f;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
+    }
 
     public void AssignClient()
     {
@@ -83,6 +92,8 @@ public class BeerSlot : MonoBehaviour
         {
             if (playerInvInRange.RemoveBeer())
             {
+                if (depositSound != null)
+                    audioSource.PlayOneShot(depositSound);
                 PlaceBeerWithSlide();
                 Debug.Log("Bière servie au client !");
             }

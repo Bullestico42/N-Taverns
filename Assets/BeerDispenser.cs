@@ -17,6 +17,8 @@ public class BeerDispenser : MonoBehaviour
     public GameObject beerPrefab;
     [Tooltip("Transforms des emplacements (slots) où les bières apparaissent")]
     public Transform[] slotTransforms;
+    private AudioSource audioSource;
+    public AudioClip popSound;
 
     // État interne
     private int currentBeers = 0;
@@ -27,6 +29,9 @@ public class BeerDispenser : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
         // Démarre la coroutine de recharge
         StartCoroutine(RefillRoutine());
     }
@@ -93,6 +98,8 @@ public class BeerDispenser : MonoBehaviour
         {
             if (playerInvInRange.AddBeer())
             {
+                if (popSound != null)
+                    audioSource.PlayOneShot(popSound);
                 TakeBeerFromDispenser();
                 GameManager.Instance.goldOnPlayer -= 2;
                 GameManager.Instance.UpdateGoldUI();
